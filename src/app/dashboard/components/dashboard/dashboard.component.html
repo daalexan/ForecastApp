@@ -1,6 +1,6 @@
-<div class="main-container d-flex justify-content-center align-items-center">
+<div class="d-flex justify-content-center align-items-center">
   <div class="dashboard d-flex flex-column">
-    <div class="forecast-search d-flex justify-content-center align-items-center">
+    <div class="d-flex justify-content-center align-items-center">
       <div class="d-flex flex-column align-items-center">
         <h3 class="text-center pt-3 pb-3">Enter city name to get forecast</h3>
         <p-iftalabel>
@@ -23,7 +23,7 @@
     <div class="forecast-container d-flex flex-wrap align-items-center">
       @for (weather of forecast()?.weather; track $index) {
         <div class="day-forecast-card d-flex flex-column p-3">
-          <div class="dashboard-weather-details-date d-flex">
+          <div class="d-flex">
             <h2 class="m-0">{{ weather.date | date: 'dd MMM' }}</h2>
           </div>
           <br>

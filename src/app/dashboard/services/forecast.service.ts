@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { WEATHER_API_CONSTANTS } from '../../core/constants/weather-api-constants';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
@@ -8,8 +8,7 @@ import { ForecastApiModel, ForecastModel, WeatherDetails } from '../models/forec
   providedIn: 'root'
 })
 export class ForecastService {
-
-  constructor(private http: HttpClient) { }
+  private http = inject(HttpClient);
 
   public getForecastByCityName(cityName: string): Observable<ForecastModel> {
     const url = `${WEATHER_API_CONSTANTS.apiUrl}?q=${cityName}&appid=${WEATHER_API_CONSTANTS.apiKey}&units=metric`;
