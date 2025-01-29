@@ -1,0 +1,17 @@
+.dashboard {
+  padding: 2rem;
+
+  .day-forecast-card {
+    background-color: rgba(246, 253, 245, 0.911);
+    border-radius: 5px;
+    margin: .5rem;
+    width: 15rem;
+    min-height: 13rem;
+  }
+
+  .forecast-container {
+    @media screen and (max-width: 1080px) {
+      justify-content: center;
+    }
+  }
+}
